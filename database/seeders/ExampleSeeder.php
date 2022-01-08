@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ExampleSeeder extends Seeder
 {
@@ -13,6 +14,8 @@ class ExampleSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('examples')->insert([
+            'id' => 10,
+        ]);
     }
 }
