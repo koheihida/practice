@@ -9,7 +9,7 @@ class SkillController extends Controller
 {
     public function index()
     {
-        $Skills = Skill::all();
-        return view('skills.index', compact('skills'));
+        $skills = Skill::all();
+        return view('skill.index', compact('skills'));
     }
 }
