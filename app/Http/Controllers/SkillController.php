@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Example;
+use App\Models\Skill;
 
-class ExampleController extends Controller
+class SkillController extends Controller
 {
     public function index()
     {
-        $examples = Example::all();
-        return view('example', compact('examples'));
+        $Skills = Skill::all();
+        return view('skills.index', compact('skills'));
     }
 }
