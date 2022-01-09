@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\DB;
 class SkillSeeder extends Seeder
 {
     /**
@@ -13,6 +13,10 @@ class SkillSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('skills')->insert([
+            ['skill_name' => 'php', 'skill_status' => 1],
+            ['skill_name' => 'Laravel', 'skill_status' => 2],
+            ['skill_name' => 'Ruby', 'skill_status' =>3],
+        ]);
     }
 }
